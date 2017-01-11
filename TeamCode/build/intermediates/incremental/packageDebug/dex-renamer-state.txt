@@ -1,7 +1,0 @@
-#Tue Jan 10 14:11:22 PST 2017
-base.0=/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa6226/ftc_app/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b86eaa4591c503a9543d88f82152814ef0fb625b
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa6226/ftc_app/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_66f6d2c93154fee3e7fee38c52ed3400feff3201/classes.dex
-base.1=/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa6226/ftc_app/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_66f6d2c93154fee3e7fee38c52ed3400feff3201
-file.0=/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa6226/ftc_app/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b86eaa4591c503a9543d88f82152814ef0fb625b/classes.dex

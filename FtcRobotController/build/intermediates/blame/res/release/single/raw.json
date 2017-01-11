@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/simple_vertex_shader.glsl",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/simple_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/texture_fragment_shader.glsl",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/texture_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/chimedisconnect.wav",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/chimedisconnect.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/chimedisconnect.wav",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/chimedisconnect.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/cube_mesh_fragment_shader.glsl",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/cube_mesh_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/warningmessage.wav",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/warningmessage.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/errormessage.wav",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/errormessage.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/nxtstartupsound.wav",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/nxtstartupsound.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/cube_mesh_fragment_shader.glsl",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/cube_mesh_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/texture_fragment_shader.glsl",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/texture_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/chimeconnect.wav",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/chimeconnect.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/cube_mesh_vertex_shader.glsl",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/cube_mesh_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/texture_vertex_shader.glsl",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/texture_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/simple_vertex_shader.glsl",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/simple_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/warningmessage.wav",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/warningmessage.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/texture_vertex_shader.glsl",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/texture_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/chimeconnect.wav",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/chimeconnect.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/cube_mesh_vertex_shader.glsl",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/cube_mesh_vertex_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/color_fragment_shader.glsl",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/color_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/color_fragment_shader.glsl",
+        "source": "/Users/esauder/Documents/My Docs/Programing/Java/CHSRobotics/2016-17/Bambusa-6226/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/color_fragment_shader.glsl"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/nxtstartupsound.wav",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/nxtstartupsound.wav"
+    },
+    {
+        "merged": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/raw/errormessage.wav",
+        "source": "/Users/esauder/Documents/myDocs/programing/Java/CHSRobotics/2016-2017/Omniweel1st/OmniWheelRobot2016-2017/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/errormessage.wav"
+    }
+]

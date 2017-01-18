@@ -17,6 +17,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
@@ -34,23 +35,53 @@ public class MainOpMode extends LinearOpMode {
     private boolean motor = false;
     private boolean toggle = true;
 
-    //starts the initiation for the robot when you press the init on the app
+    //Sets the driver motors
+    DcMotor frontRightMotor;
+    DcMotor frontLeftMotor;
+    DcMotor backRightMotor;
+    DcMotor backLeftMotor;
+
+    //Sets the launcher/intake motors
+    DcMotor intakeMotor;
+    DcMotor launcherMotor;
+
+    //Sets the yoga ball lifter
+    DcMotor forkliftMotorRight;
+    DcMotor forkliftMotorLeft;
+
+    //Sets the servos for the fork prongs
+    Servo forkLeftServo;
+    Servo forkRightServo;
+
+    //Starts the initiation for the robot when you press the init on the app
     @Override
     public void runOpMode() throws InterruptedException {
 
-        //adds details on the phone screen that say when the robot is initialized
+        //Adds details on the phone screen that say when the robot is initialized
         telemetry.addData("Status", "Initialized");
         telemetry.update();
 
-        //Initiates and names the driving motors
-        DcMotor frontRightMotor = hardwareMap.dcMotor.get("frontRightMotor");
-        DcMotor frontLeftMotor = hardwareMap.dcMotor.get("frontLeftMotor");
-        DcMotor backRightMotor = hardwareMap.dcMotor.get("backRightMotor");
-        DcMotor backLeftMotor = hardwareMap.dcMotor.get("backLeftMotor");
+        //Initiates the names of the driving motors
+        frontRightMotor = hardwareMap.dcMotor.get("frontRightMotor");
+        frontLeftMotor = hardwareMap.dcMotor.get("frontLeftMotor");
+        backRightMotor = hardwareMap.dcMotor.get("backRightMotor");
+        backLeftMotor = hardwareMap.dcMotor.get("backLeftMotor");
 
-        //Initiates and names the intake/launcher system motors
-        DcMotor intakeMotor = hardwareMap.dcMotor.get("intakeMotor");
-        DcMotor launcherMotor = hardwareMap.dcMotor.get("launcherMotor");
+        //Initiates the names the intake/launcher system motors
+        intakeMotor = hardwareMap.dcMotor.get("intakeMotor");
+        launcherMotor = hardwareMap.dcMotor.get("launcherMotor");
+
+        //Initiates the names of the forklift motors
+        forkliftMotorRight = hardwareMap.dcMotor.get("forkliftRight");
+        forkliftMotorLeft = hardwareMap.dcMotor.get("forkliftLeft");
+
+        //Initiates the names of the servos for the forklift prongs
+        forkRightServo = hardwareMap.servo.get("forkRight");
+        forkLeftServo = hardwareMap.servo.get("forkLeft");
+
+        //Makes sure that the servos are in the upright position to start
+        forkRightServo.setPosition(0);
+        forkLeftServo.setPosition(0);
 
         //Initiates all the variables that will be used
         float x,y,r,m,n;
@@ -177,7 +208,7 @@ public class MainOpMode extends LinearOpMode {
             //sets the launcher motor to gamepad buttons a and b
             //sets the pulling back of the rack to gamepad2 button a
             if (gamepad2.a) {
-                launcherMotor.setPower(0.5);
+                launcherMotor.setPower(1);
             }
             //sets a reverse (forward due to the design of the robot) of the motor to gamepad2 button b
             else if (gamepad2.b) {
@@ -188,6 +219,19 @@ public class MainOpMode extends LinearOpMode {
                 launcherMotor.setPower(0);
             }
 
+            //sets the fork lift to the gamepad2 dpad up and down
+            if (gamepad2.dpad_up) {
+                forkliftMotorRight.setPower(0.5);
+                forkliftMotorLeft.setPower(-0.5);
+            }
+            else if (gamepad2.dpad_down){
+                forkliftMotorRight.setPower(-0.5);
+                forkliftMotorLeft.setPower(0.5);
+            }
+            else {
+                forkliftMotorRight.setPower(0);
+                forkliftMotorLeft.setPower(0);
+            }
             //Allows the hardware to catch up if no input is specified
             idle();
         }

@@ -14,6 +14,7 @@
 package org.firstinspires.ftc.teamcode;
 
 //imports all the necessary libraries
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -25,7 +26,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  **/
 
 //Creates the and names the TeleOp to control the robot
-@TeleOp(name="MainOpMode", group="Bambusa")
+    @Disabled
+//@TeleOp(name="MainOpMode", group="Bambusa")
 public class MainOpMode extends LinearOpMode {
 
     //initiates the runtime variable and sets it to show the runtime of the TeleOp
@@ -36,22 +38,23 @@ public class MainOpMode extends LinearOpMode {
     private boolean toggle = true;
 
     //Sets the driver motors
-    DcMotor frontRightMotor;
-    DcMotor frontLeftMotor;
-    DcMotor backRightMotor;
-    DcMotor backLeftMotor;
+    private DcMotor frontRightMotor = null;
+    private DcMotor frontLeftMotor = null;
+    private DcMotor backRightMotor = null;
+    private DcMotor backLeftMotor = null;
 
     //Sets the launcher/intake motors
-    DcMotor intakeMotor;
-    DcMotor launcherMotor;
+    private DcMotor intakeMotor = null;
+    private DcMotor launcherMotor = null;
 
     //Sets the yoga ball lifter
-    DcMotor forkliftMotorRight;
-    DcMotor forkliftMotorLeft;
+    private DcMotor forkliftMotorRight = null;
+    private DcMotor forkliftMotorLeft = null;
 
     //Sets the servos for the fork prongs
-    Servo forkLeftServo;
-    Servo forkRightServo;
+    private Servo forkLeftServo = null;
+    private Servo forkRightServo = null;
+
 
     //Starts the initiation for the robot when you press the init on the app
     @Override
@@ -236,4 +239,5 @@ public class MainOpMode extends LinearOpMode {
             idle();
         }
     }
+
 }

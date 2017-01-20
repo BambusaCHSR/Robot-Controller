@@ -6,6 +6,8 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
+import java.util.ArrayList;
+
 import static android.R.attr.x;
 import static android.R.attr.y;
 
@@ -13,7 +15,7 @@ import static android.R.attr.y;
  * Created by Elijah Sauder on 1/18/17, 10:02PM.
  **/
 
-public class DefineOp {
+public class DefineOpTeleOp {
 
     /** sets all the motors/servo **/
     //Sets the driver motors
@@ -40,7 +42,7 @@ public class DefineOp {
     private ElapsedTime period  = new ElapsedTime();
     private ElapsedTime runtime = new ElapsedTime();
 
-    public DefineOp() {
+    public DefineOpTeleOp() {
 
     }
 
@@ -68,7 +70,7 @@ public class DefineOp {
 
         /** Sets the start speeds and positions of all the motors and servos **/
         //sets the start speeds of all the driving motors
-        double START_DRIVE_POWER = 0;
+        int START_DRIVE_POWER = 0;
         frontRightMotor.setPower(START_DRIVE_POWER);
         frontLeftMotor.setPower(START_DRIVE_POWER);
         backRightMotor.setPower(START_DRIVE_POWER);
@@ -83,7 +85,7 @@ public class DefineOp {
         forkliftMotorLeft.setPower(START_DRIVE_POWER);
 
         //sets the default servo positions
-        double START_SERVO_POSITION = 0;
+        int START_SERVO_POSITION = 0;
         forkRightServo.setPosition(START_SERVO_POSITION);
         forkLeftServo.setPosition(START_SERVO_POSITION);
 
@@ -105,7 +107,7 @@ public class DefineOp {
 
 
 
-    public void move(int enc_val, double power, float drive_power) {
+    public void move(int enc_val, float power, float drive_power) {
         frontRightMotor.setTargetPosition(enc_val);
         frontLeftMotor.setTargetPosition(enc_val);
         backRightMotor.setTargetPosition(enc_val);
@@ -149,39 +151,40 @@ public class DefineOp {
         // Reset the cycle clock for the next pass.
         period.reset();
     }
-    private Gamepad gamepad1;
-    private void variables() {
 
-        float m;
+    private Gamepad gamepad1;
+     void variables() {
+
+        int m;
         if(gamepad1.left_stick_x < 0) {
-            m =-1;
+            m = -1;
         }
         else {
             m =1;
         }
 
-        float n;
+        int n;
         if(gamepad1.left_stick_y < 0) {
-            n =1;
+            n=1;
         }
         else {
-            n =-1;
+            n=-1;
         }
 
         float x = m * ((float) Math.sqrt(1 - Math.pow((double) gamepad1.left_stick_x, 2)) - 1);
         float y = n * ((float) Math.sqrt(1 - Math.pow((double) gamepad1.left_stick_y, 2)) - 1);
+        float r = gamepad1.right_stick_x;
     }
 
-    public void driving_Full() {
+    void driving_Full() {
         variables();
         float r = gamepad1.right_stick_x;
-
         frontLeftMotor.setPower(-y - x + r);
         frontRightMotor.setPower(y - x + r);
         backRightMotor.setPower(y + x + r);
         backLeftMotor.setPower(-y + x + r);
     }
-    public void driving_Quarter() {
+    void driving_Quarter() {
         variables();
         float r = gamepad1.right_stick_x;
         frontLeftMotor.setPower(0.25 * (-y - x + r));
@@ -189,7 +192,7 @@ public class DefineOp {
         backRightMotor.setPower(0.25 * (y + x + r));
         backLeftMotor.setPower(0.25 * (-y + x + r));
     }
-    public void driving_Tenth() {
+    void driving_Tenth() {
         variables();
         float r = gamepad1.right_stick_x;
         frontLeftMotor.setPower(0.1 * (-y - x + r));

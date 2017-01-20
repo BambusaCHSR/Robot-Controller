@@ -25,7 +25,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 @TeleOp(name="MainOpMode", group="Bambusa")
 public class MainTeleOp extends LinearOpMode {
 
-    private DefineOp robot= new DefineOp();
+    private DefineOpTeleOp robot= new DefineOpTeleOp();
 
     private ElapsedTime runtime = new ElapsedTime();
 
@@ -37,7 +37,6 @@ public class MainTeleOp extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         robot.init(hardwareMap);
-        float x,y,r,m,n;
         waitForStart();
         while (opModeIsActive()) {
             if (gamepad1.left_bumper) {

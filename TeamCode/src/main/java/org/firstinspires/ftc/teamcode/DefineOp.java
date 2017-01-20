@@ -6,48 +6,42 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-import java.util.ArrayList;
-
-import static android.R.attr.x;
-import static android.R.attr.y;
-
 /**
  * Created by Elijah Sauder on 1/18/17, 10:02PM.
  **/
 
-public class DefineOpTeleOp {
-
-    /** sets all the motors/servo **/
+class DefineOpTeleOp {
+     /** sets all the motors/servo **/
     //Sets the driver motors
-    public DcMotor frontRightMotor = null;
-    public DcMotor frontLeftMotor = null;
-    public DcMotor backRightMotor = null;
-    public DcMotor backLeftMotor = null;
+    private DcMotor frontRightMotor = null;
+    private DcMotor frontLeftMotor = null;
+    private DcMotor backRightMotor = null;
+    private DcMotor backLeftMotor = null;
 
     //Sets the launcher/intake motors
-    public DcMotor intakeMotor = null;
-    public DcMotor launcherMotor = null;
+    DcMotor intakeMotor = null;
+    DcMotor launcherMotor = null;
 
     //Sets the yoga ball lifter
-    public DcMotor forkliftMotorRight = null;
-    public DcMotor forkliftMotorLeft = null;
+    DcMotor forkliftMotorRight = null;
+    DcMotor forkliftMotorLeft = null;
 
     //Sets the servos for the fork prongs
-    public Servo forkLeftServo = null;
-    public Servo forkRightServo = null;
+    private Servo forkLeftServo = null;
+    private Servo forkRightServo = null;
 
 
-    HardwareMap map=null;
+    private HardwareMap map = null;
 
-    private ElapsedTime period  = new ElapsedTime();
+    private ElapsedTime period = new ElapsedTime();
     private ElapsedTime runtime = new ElapsedTime();
 
-    public DefineOpTeleOp() {
+    DefineOpTeleOp() {
 
     }
 
     public void init(HardwareMap hwm) {
-        map=hwm;
+        map = hwm;
 
         /** Maps the names so they can be called in configuration **/
         //Initiates the names of the driving motors
@@ -106,7 +100,6 @@ public class DefineOpTeleOp {
     }
 
 
-
     public void move(int enc_val, float power, float drive_power) {
         frontRightMotor.setTargetPosition(enc_val);
         frontLeftMotor.setTargetPosition(enc_val);
@@ -125,7 +118,7 @@ public class DefineOpTeleOp {
         launcherMotor.setPower(power);
     }
 
-    public void reset_encoders() {
+    public void resetEncoders() {
         frontRightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         frontLeftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         backRightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
@@ -140,9 +133,9 @@ public class DefineOpTeleOp {
         return runtime.seconds();
     }
 
-    public void waitForTick(long periodMs)  throws InterruptedException {
+    void waitForTick(long periodMs) throws InterruptedException {
 
-        long  remaining = periodMs - (long)period.milliseconds();
+        long remaining = periodMs - (long) period.milliseconds();
 
         // sleep for the remaining portion of the regular cycle period.
         if (remaining > 0)
@@ -152,8 +145,9 @@ public class DefineOpTeleOp {
         period.reset();
     }
 
-    private Gamepad gamepad1;
-     void variables() {
+     private Gamepad gamepad1;
+     private float stickY,stickX,rotate;
+     private void variables() {
 
         int m;
         if(gamepad1.left_stick_x < 0) {
@@ -171,33 +165,118 @@ public class DefineOpTeleOp {
             n=-1;
         }
 
-        float x = m * ((float) Math.sqrt(1 - Math.pow((double) gamepad1.left_stick_x, 2)) - 1);
-        float y = n * ((float) Math.sqrt(1 - Math.pow((double) gamepad1.left_stick_y, 2)) - 1);
-        float r = gamepad1.right_stick_x;
+        stickX = m * ((float) Math.sqrt(1 - Math.pow((double) gamepad1.left_stick_x, 2)) - 1);
+        stickY = n * ((float) Math.sqrt(1 - Math.pow((double) gamepad1.left_stick_y, 2)) - 1);
+        rotate = gamepad1.right_stick_x;
     }
 
-    void driving_Full() {
+    private void driving(double power) {
         variables();
-        float r = gamepad1.right_stick_x;
-        frontLeftMotor.setPower(-y - x + r);
-        frontRightMotor.setPower(y - x + r);
-        backRightMotor.setPower(y + x + r);
-        backLeftMotor.setPower(-y + x + r);
+        frontLeftMotor.setPower(power*(-stickY - stickX + rotate));
+        frontRightMotor.setPower(power*(stickY - stickX + rotate));
+        backRightMotor.setPower(power*(stickY + stickX + rotate));
+        backLeftMotor.setPower(power*(-stickY + stickX + rotate));
     }
-    void driving_Quarter() {
-        variables();
-        float r = gamepad1.right_stick_x;
-        frontLeftMotor.setPower(0.25 * (-y - x + r));
-        frontRightMotor.setPower(0.25 * (y - x + r));
-        backRightMotor.setPower(0.25 * (y + x + r));
-        backLeftMotor.setPower(0.25 * (-y + x + r));
+
+    void Driving() {
+        if (gamepad1.left_bumper) {
+            driving(0.1);
+        }
+        else if (gamepad1.right_bumper) {
+            driving(0.25);
+        }
+        else {
+            driving(1);
+        }
     }
-    void driving_Tenth() {
-        variables();
-        float r = gamepad1.right_stick_x;
-        frontLeftMotor.setPower(0.1 * (-y - x + r));
-        frontRightMotor.setPower(0.1 * (y - x + r));
-        backRightMotor.setPower(0.1 * (y + x + r));
-        backLeftMotor.setPower(0.1 * (-y + x + r));
+
+    private boolean motor = false;
+    private boolean toggle = true;
+    private Gamepad gamepad2;
+
+    private void intakeToggleForward() {
+        if (toggle && gamepad2.right_bumper) {
+            toggle = false;
+            if (motor) {
+                motor= false;
+                intakeMotor.setPower(1);
+            } else {
+                motor= true;
+                intakeMotor.setPower(0);
+            }
+        }
+        else {
+            if (!gamepad2.right_bumper) {
+                toggle = true;
+            }
+        }
+    }
+
+    private void intakeToggleReverse(){
+        if (toggle && gamepad2.right_bumper) {
+            toggle = false;
+            if (motor) {
+                motor= false;
+                intakeMotor.setPower(-1);
+            }
+            else {
+                motor= true;
+                intakeMotor.setPower(0);
+            }
+        }
+        else {
+            if (!gamepad2.right_bumper) {
+                toggle = true;
+            }
+        }
+    }
+
+    void intakeToggle() {
+        if (gamepad2.left_bumper) {
+            intakeToggleReverse();
+        }
+        else {
+            intakeToggleForward();
+        }
+    }
+
+    void launcher() {
+        double launcherPower = 1;
+
+        if (gamepad2.a) {
+            launcherMotor.setPower(launcherPower);
+        }
+        else if (gamepad2.b) {
+            launcherMotor.setPower(launcherPower/2);
+        }
+        else {
+            launcherMotor.setPower(0*launcherPower);
+        }
+    }
+    void forklift() {
+        double forkliftPower = 0.5;
+        if (gamepad2.dpad_up) {
+            forkliftMotorRight.setPower(forkliftPower);
+            forkliftMotorLeft.setPower(-forkliftPower);
+        }
+        else if (gamepad2.dpad_down){
+            forkliftPower = -0.5;
+            forkliftMotorRight.setPower(forkliftPower);
+            forkliftMotorLeft.setPower(-forkliftPower);
+        }
+        else {
+            forkliftPower = 0;
+            forkliftMotorRight.setPower(0*forkliftPower);
+            forkliftMotorLeft.setPower(0*forkliftPower);
+        }
+    }
+
+    public void setGamepad1(Gamepad gamepad1) {
+        this.gamepad1 = gamepad1;
+    }
+
+    public void setGamepad2(Gamepad gamepad2) {
+        this.gamepad2 = gamepad2;
     }
 }
+

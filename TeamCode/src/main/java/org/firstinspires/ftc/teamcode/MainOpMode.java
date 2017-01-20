@@ -27,7 +27,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 //Creates the and names the TeleOp to control the robot
     @Disabled
-//@TeleOp(name="MainOpMode", group="Bambusa")
+@TeleOp(name="MainOpMode", group="Bambusa")
 public class MainOpMode extends LinearOpMode {
 
     //initiates the runtime variable and sets it to show the runtime of the TeleOp

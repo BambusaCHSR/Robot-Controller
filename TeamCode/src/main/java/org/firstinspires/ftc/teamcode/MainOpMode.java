@@ -18,15 +18,13 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
  * Created by CHSRobotics - Elijah Sauder on 12/15/16, 4:34PM.
  **/
-
+@Disabled
 //Creates the and names the TeleOp to control the robot
-    @Disabled
 @TeleOp(name="MainOpMode", group="Bambusa")
 public class MainOpMode extends LinearOpMode {
 
@@ -38,23 +36,14 @@ public class MainOpMode extends LinearOpMode {
     private boolean toggle = true;
 
     //Sets the driver motors
-    private DcMotor frontRightMotor = null;
-    private DcMotor frontLeftMotor = null;
-    private DcMotor backRightMotor = null;
-    private DcMotor backLeftMotor = null;
+    public DcMotor frontRightMotor = null;
+    public DcMotor frontLeftMotor = null;
+    public DcMotor backRightMotor = null;
+    public DcMotor backLeftMotor = null;
 
     //Sets the launcher/intake motors
-    private DcMotor intakeMotor = null;
-    private DcMotor launcherMotor = null;
-
-    //Sets the yoga ball lifter
-    private DcMotor forkliftMotorRight = null;
-    private DcMotor forkliftMotorLeft = null;
-
-    //Sets the servos for the fork prongs
-    private Servo forkLeftServo = null;
-    private Servo forkRightServo = null;
-
+    public DcMotor intakeMotor = null;
+    public DcMotor launcherMotor = null;
 
     //Starts the initiation for the robot when you press the init on the app
     @Override
@@ -73,18 +62,6 @@ public class MainOpMode extends LinearOpMode {
         //Initiates the names the intake/launcher system motors
         intakeMotor = hardwareMap.dcMotor.get("intakeMotor");
         launcherMotor = hardwareMap.dcMotor.get("launcherMotor");
-
-        //Initiates the names of the forklift motors
-        forkliftMotorRight = hardwareMap.dcMotor.get("forkliftRight");
-        forkliftMotorLeft = hardwareMap.dcMotor.get("forkliftLeft");
-
-        //Initiates the names of the servos for the forklift prongs
-        forkRightServo = hardwareMap.servo.get("forkRight");
-        forkLeftServo = hardwareMap.servo.get("forkLeft");
-
-        //Makes sure that the servos are in the upright position to start
-        forkRightServo.setPosition(0);
-        forkLeftServo.setPosition(0);
 
         //Initiates all the variables that will be used
         float x,y,r,m,n;
@@ -211,29 +188,15 @@ public class MainOpMode extends LinearOpMode {
             //sets the launcher motor to gamepad buttons a and b
             //sets the pulling back of the rack to gamepad2 button a
             if (gamepad2.a) {
-                launcherMotor.setPower(1);
+                launcherMotor.setPower(-1);
             }
             //sets a reverse (forward due to the design of the robot) of the motor to gamepad2 button b
             else if (gamepad2.b) {
-                launcherMotor.setPower(-0.5);
+                launcherMotor.setPower(1);
             }
             //turns off the motor if neither of the buttons are pressed
             else {
                 launcherMotor.setPower(0);
-            }
-
-            //sets the fork lift to the gamepad2 dpad up and down
-            if (gamepad2.dpad_up) {
-                forkliftMotorRight.setPower(0.5);
-                forkliftMotorLeft.setPower(-0.5);
-            }
-            else if (gamepad2.dpad_down){
-                forkliftMotorRight.setPower(-0.5);
-                forkliftMotorLeft.setPower(0.5);
-            }
-            else {
-                forkliftMotorRight.setPower(0);
-                forkliftMotorLeft.setPower(0);
             }
             //Allows the hardware to catch up if no input is specified
             idle();

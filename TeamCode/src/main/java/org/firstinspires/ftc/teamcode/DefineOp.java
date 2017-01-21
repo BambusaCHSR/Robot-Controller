@@ -133,18 +133,6 @@ class DefineOpTeleOp {
         return runtime.seconds();
     }
 
-    void waitForTick(long periodMs) throws InterruptedException {
-
-        long remaining = periodMs - (long) period.milliseconds();
-
-        // sleep for the remaining portion of the regular cycle period.
-        if (remaining > 0)
-            Thread.sleep(remaining);
-
-        // Reset the cycle clock for the next pass.
-        period.reset();
-    }
-
      private Gamepad gamepad1;
      private float stickY,stickX,rotate;
      private void variables() {

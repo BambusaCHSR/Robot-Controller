@@ -25,7 +25,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 public class MainTeleOp extends LinearOpMode {
 
     private DefineOpTeleOp robot= new DefineOpTeleOp();
-    private int waitTimeMs = 1;
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -37,7 +36,6 @@ public class MainTeleOp extends LinearOpMode {
             robot.intakeToggle();
             robot.launcher();
             robot.forklift();
-            robot.waitForTick(waitTimeMs);
             idle();
         }
     }

@@ -1,13 +1,14 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 /**
  * Created by - Elijah Sauder on 1/7/17, 10:46 PM.
  **/
 
-
+@Disabled
 @Autonomous(name="OneBall", group="Bambusa")
 class oneBallAuto extends LinearOpMode {
     private Definitions robot = new Definitions();
@@ -15,6 +16,16 @@ class oneBallAuto extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
         robot.init(hardwareMap);
         waitForStart();
+
+        robot.setDriveForward();
+        robot.restartDriveEncoders();
+        robot.setDriveDistance(560);
+        robot.runToPosition();
+        robot.setPower(1);
+        robot.waitForDriveMotorStop();
+        robot.setPower(0);
+        sleep(10);
+        idle();
 
         //Launch particle
         robot.setLaunchRotateForward();
@@ -28,7 +39,7 @@ class oneBallAuto extends LinearOpMode {
         idle();
 
         //drive forward into Cap Ball
-        robot.setDriveForward();
+        /*robot.setDriveForward();
         robot.restartDriveEncoders();
         robot.setDriveDistance(3560);
         robot.runToPosition();
@@ -67,6 +78,6 @@ class oneBallAuto extends LinearOpMode {
         robot.waitForDriveMotorStop();
         robot.setPower(0);
         sleep(10);
-        idle();
+        idle();*/
     }
 }

@@ -16,6 +16,16 @@ class twoBallAuto extends LinearOpMode {
         robot.init(hardwareMap);
         waitForStart();
 
+        robot.setDriveForward();
+        robot.restartDriveEncoders();
+        robot.setDriveDistance(560);
+        robot.runToPosition();
+        robot.setPower(1);
+        robot.waitForDriveMotorStop();
+        robot.setPower(0);
+        sleep(10);
+        idle();
+
         //Launch particle one
         robot.setLaunchRotateForward();
         robot.restartLauncherEncoders();

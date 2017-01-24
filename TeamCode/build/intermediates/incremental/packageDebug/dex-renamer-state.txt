@@ -1,0 +1,7 @@
+#Sat Jan 21 12:23:55 PST 2017
+base.0=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_729298ee1a26e27e4189a2251b9e218167f98c13
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_86606eee6979d61a7d01697d235283eb32520626/classes.dex
+base.1=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_86606eee6979d61a7d01697d235283eb32520626
+file.0=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_729298ee1a26e27e4189a2251b9e218167f98c13/classes.dex

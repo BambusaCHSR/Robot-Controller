@@ -1,0 +1,4 @@
+#Sat Jan 21 09:58:50 PST 2017
+base.0=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/release/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex

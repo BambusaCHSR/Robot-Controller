@@ -56,6 +56,10 @@ class Definitions {
         intakeMotor.setDirection(DcMotorSimple.Direction.FORWARD);
     }
 
+    void setLaunchRotateBackward() {
+        launcherMotor.setDirection(DcMotorSimple.Direction.FORWARD);
+    }
+
     /**
      * Rotate
      **/

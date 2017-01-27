@@ -105,7 +105,6 @@ public class BamTeleOp extends LinearOpMode {
                 robot.setLaunchPower(1);
                 robot.waitForLauncherMotorStop();
                 robot.setLaunchPower(0);
-                sleep(500);
                 idle();
             }
             else if (gamepad2.b) {

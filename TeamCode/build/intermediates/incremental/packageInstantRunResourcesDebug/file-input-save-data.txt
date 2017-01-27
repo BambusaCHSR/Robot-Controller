@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jan 20 19:16:43 PST 2017
+#Thu Jan 26 16:24:07 PST 2017
 14.set=ANDROID_RESOURCE
 180.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug/images/ftcGamepad.png
 118.set=ASSET
@@ -146,7 +146,7 @@
 144.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug/images/ftcUltrasonicSensor.png
 175.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
 120.set=ASSET
-2.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/drawable/icon_menu.png
+2.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/matrix_devices.xml
 150.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
 76.set=ANDROID_RESOURCE
 48.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_
@@ -203,7 +203,7 @@
 176.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
 130.set=ASSET
 177.set=ANDROID_RESOURCE
-3.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/matrix_devices.xml
+3.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/drawable/icon_menu.png
 151.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_
 86.set=ASSET
 49.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
@@ -309,7 +309,7 @@
 101.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
 150.set=ASSET
 197.set=ASSET
-5.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/raw/simple_vertex_shader.glsl
+5.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/i2cs.xml
 153.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_
 180.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
 111.set=ANDROID_RESOURCE
@@ -363,7 +363,7 @@
 102.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
 160.set=ANDROID_RESOURCE
 154.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
-6.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/layout/i2cs.xml
+6.file=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/resources-debug.ap_/res/raw/simple_vertex_shader.glsl
 181.base=/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/assets/debug
 121.set=ASSET
 count=206

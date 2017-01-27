@@ -5,29 +5,29 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="58250220673907"
+    timestamp="10618016568669"
     token="-5663558144919118915"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="520" />
+        duration="47" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="93" />
+        duration="8" />
     <task
         name="verifier"
-        duration="4" />
+        duration="1" />
 
     <artifact
         location="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/outputs/apk/TeamCode-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="58250220673907"
+        timestamp="10618016568669"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/outputs/apk/TeamCode-debug.apk"

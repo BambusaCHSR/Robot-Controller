@@ -73,11 +73,14 @@ class Definitions {
         motorDriveFrontLeft = Map.dcMotor.get("motorDriveFrontLeft");
         motorDriveBackRight = Map.dcMotor.get("motorDriveBackRight");
         motorDriveBackLeft = Map.dcMotor.get("motorDriveBackLeft");
+
         //Initiates the launcher motor names
         motorLauncherRight = Map.dcMotor.get("motorLauncherRight");
         motorLauncherLeft = Map.dcMotor.get("motorLauncherLeft");
+
         //initiates the intake motor names
         motorIntake = Map.dcMotor.get("motorIntake");
+
         //initiates the capball lifter motor names
         motorCapballLifter = Map.dcMotor.get("motorCapballLifter");
 
@@ -94,9 +97,13 @@ class Definitions {
         //Initiates the names of the color sensors
         sensorColorLeft = Map.colorSensor.get("sensorColorLeft");
         sensorColorRight = Map.colorSensor.get("sensorColorRight");
+
+        //initiates the names of the light sensors
         sensorLightBottom = Map.lightSensor.get("sensorLightBottom");
+
         //initiates the names of the distance sensors
         sensorDistance = Map.ultrasonicSensor.get("sensorDistance");
+
         //initiates the names of the gyro sensors
         sensorGyro = Map.gyroSensor.get("sensorGyro");
     }

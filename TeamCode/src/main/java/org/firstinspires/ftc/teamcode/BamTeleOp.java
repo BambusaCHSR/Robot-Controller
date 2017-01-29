@@ -43,22 +43,22 @@ public class BamTeleOp extends LinearOpMode {
             robot.r = gamepad1.right_stick_x;
 
             if (gamepad1.left_bumper) {
-                robot.frontLeftMotor.setPower(0.1 * (-robot.y - robot.x + robot.r));
-                robot.frontRightMotor.setPower(0.1 * (robot.y - robot.x + robot.r));
-                robot.backRightMotor.setPower(0.1 * (robot.y + robot.x + robot.r));
-                robot.backLeftMotor.setPower(0.1 * (-robot.y + robot.x + robot.r));
+                robot.motorDriveFrontLeft.setPower(0.1 * (-robot.y - robot.x + robot.r));
+                robot.motorDriveFrontRight.setPower(0.1 * (robot.y - robot.x + robot.r));
+                robot.motorDriveBackRight.setPower(0.1 * (robot.y + robot.x + robot.r));
+                robot.motorDriveBackLeft.setPower(0.1 * (-robot.y + robot.x + robot.r));
             }
             else if (gamepad1.right_bumper) {
-                robot.frontLeftMotor.setPower(0.25 * (-robot.y - robot.x + robot.r));
-                robot.frontRightMotor.setPower(0.25 * (robot.y - robot.x + robot.r));
-                robot.backRightMotor.setPower(0.25 * (robot.y + robot.x + robot.r));
-                robot.backLeftMotor.setPower(0.25 * (-robot.y + robot.x + robot.r));
+                robot.motorDriveFrontLeft.setPower(0.25 * (-robot.y - robot.x + robot.r));
+                robot.motorDriveFrontRight.setPower(0.25 * (robot.y - robot.x + robot.r));
+                robot.motorDriveBackRight.setPower(0.25 * (robot.y + robot.x + robot.r));
+                robot.motorDriveBackLeft.setPower(0.25 * (-robot.y + robot.x + robot.r));
             }
             else {
-                robot.frontLeftMotor.setPower(-robot.y - robot.x + robot.r);
-                robot.frontRightMotor.setPower(robot.y - robot.x + robot.r);
-                robot.backRightMotor.setPower(robot.y + robot.x + robot.r);
-                robot.backLeftMotor.setPower(-robot.y + robot.x + robot.r);
+                robot.motorDriveFrontLeft.setPower(-robot.y - robot.x + robot.r);
+                robot.motorDriveFrontRight.setPower(robot.y - robot.x + robot.r);
+                robot.motorDriveBackRight.setPower(robot.y + robot.x + robot.r);
+                robot.motorDriveBackLeft.setPower(-robot.y + robot.x + robot.r);
             }
 
             if (gamepad2.left_bumper) {
@@ -66,11 +66,11 @@ public class BamTeleOp extends LinearOpMode {
                     toggle = false;
                     if (motor) {
                         motor= false;
-                        robot.intakeMotor.setPower(-1);
+                        robot.motorIntake.setPower(-1);
                     }
                     else {
                         motor= true;
-                        robot.intakeMotor.setPower(0);
+                        robot.motorIntake.setPower(0);
                     }
                 }
                 else {
@@ -84,10 +84,10 @@ public class BamTeleOp extends LinearOpMode {
                     toggle = false;
                     if (motor) {
                         motor= false;
-                        robot.intakeMotor.setPower(1);
+                        robot.motorIntake.setPower(1);
                     } else {
                         motor= true;
-                        robot.intakeMotor.setPower(0);
+                        robot.motorIntake.setPower(0);
                     }
                 }
                 else {
@@ -108,10 +108,10 @@ public class BamTeleOp extends LinearOpMode {
                 idle();
             }
             else if (gamepad2.b) {
-                robot.launcherMotor.setPower(1);
+                robot.launcherMotor(1);
             }
             else {
-                robot.launcherMotor.setPower(0);
+                robot.launcherMotor(0);
             }
         }
     }

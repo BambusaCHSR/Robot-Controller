@@ -1,40 +1,108 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.GyroSensor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.LightSensor;
+import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.UltrasonicSensor;
 
 /**
  * Created by Elijah Sauder on 1/20/17.
  **/
 
+/* Creates the definition java file (Class) */
 class Definitions {
-    DcMotor frontRightMotor;
-    DcMotor frontLeftMotor;
-    DcMotor backRightMotor;
-    DcMotor backLeftMotor;
+    /** Initiates all the motors, servos, and sensors **/
+    /*Initiates all the motors */
+    //Initiates the drive motors
+    DcMotor motorDriveFrontRight;
+    DcMotor motorDriveFrontLeft;
+    DcMotor motorDriveBackRight;
+    DcMotor motorDriveBackLeft;
+    
+    //initiates the intake motor
+    DcMotor motorIntake;
+    
+    //initiates the launcher motors
+    DcMotor motorLauncherRight;
+    DcMotor motorLauncherLeft;
+    
+    //initiates the cap ball lifter motor
+    DcMotor motorCapballLifter;
+    
+    //-----------------------------------------------//
+    
+    /* Initiates all the servos */
+    //initiates the button pressing servos
+    Servo servoButtonLeft;
+    Servo servoButtonRight;
 
-    //Sets the launcher/intake motors
-    DcMotor intakeMotor;
-    DcMotor launcherMotor;
+    /* Initiates all the sensors */
+    //Initiates the color sensors
+    ColorSensor sensorColorLeft;
+    ColorSensor sensorColorRight;
+    
+    //initiates the light sensors
+    LightSensor sensorLightBottom;
+    
+    //initiates the distance sensors
+    UltrasonicSensor sensorDistance;
+    
+    //initiates the gyro sensor
+    GyroSensor sensorGyro;
+    
+    //===============================================//
+    
+    /** Initiates variables **/
+    //Initiates local variables that are used in TeleOp
+    float x, y, r, m, n;
+    
+    //===============================================//
 
-    float x,y,r,m,n;
-
+    /** creates all the defined actions called upon in the other programs **/
+    /* Creates a hardware map */
     public void init(HardwareMap Map) {
 
-        frontRightMotor = Map.dcMotor.get("frontRightMotor");
-        frontLeftMotor = Map.dcMotor.get("frontLeftMotor");
-        backRightMotor = Map.dcMotor.get("backRightMotor");
-        backLeftMotor = Map.dcMotor.get("backLeftMotor");
+        /** Initiates all the motor, servo, and sensor names **/
+        /* Initiates all the motors */
+        //initiates the drive motor names
+        motorDriveFrontRight = Map.dcMotor.get("motorDriveFrontRight");
+        motorDriveFrontLeft = Map.dcMotor.get("motorDriveFrontLeft");
+        motorDriveBackRight = Map.dcMotor.get("motorDriveBackRight");
+        motorDriveBackLeft = Map.dcMotor.get("motorDriveBackLeft");
+        //Initiates the launcher motor names
+        motorLauncherRight = Map.dcMotor.get("motorLauncherRight");
+        motorLauncherLeft = Map.dcMotor.get("motorLauncherLeft");
+        //initiates the intake motor names
+        motorIntake = Map.dcMotor.get("motorIntake");
+        //initiates the capball lifter motor names
+        motorCapballLifter = Map.dcMotor.get("motorCapballLifter");
 
-        //Initiates the names the intake/launcher system motors
-        intakeMotor = Map.dcMotor.get("intakeMotor");
-        launcherMotor = Map.dcMotor.get("launcherMotor");
+        //--------------------------------------------------------//
 
+        /*Initiates the names of all the servos*/
+        //sets name for Servos
+        servoButtonLeft = Map.servo.get("servoButtonLeft");
+        servoButtonRight = Map.servo.get("servoButtonRight");
+
+        //--------------------------------------------------------//
+
+        /*Initiates the names of all the sensors*/
+        //Initiates the names of the color sensors
+        sensorColorLeft = Map.colorSensor.get("sensorColorLeft");
+        sensorColorRight = Map.colorSensor.get("sensorColorRight");
+        sensorLightBottom = Map.lightSensor.get("sensorLightBottom");
+        //initiates the names of the distance sensors
+        sensorDistance = Map.ultrasonicSensor.get("sensorDistance");
+        //initiates the names of the gyro sensors
+        sensorGyro = Map.gyroSensor.get("sensorGyro");
     }
 
     /*-----------------------------------------------------------------------*/
-    /*Autonomous*/
+    /* ********************** */ /**Autonomous*/ /* ************************ */
     /*-----------------------------------------------------------------------*/
 
     /**
@@ -42,22 +110,24 @@ class Definitions {
      **/
 
     void setDriveForward() {
-        frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        backLeftMotor.setDirection(DcMotorSimple.Direction.FORWARD);
-        frontLeftMotor.setDirection(DcMotorSimple.Direction.FORWARD);
-        backRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorDriveFrontRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorDriveBackLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorDriveFrontLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorDriveBackRight.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     void setLaunchRotateForward() {
-        launcherMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorLauncherRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorLauncherLeft.setDirection(DcMotorSimple.Direction.FORWARD);
     }
 
     void setIntakeUp() {
-        intakeMotor.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorIntake.setDirection(DcMotorSimple.Direction.FORWARD);
     }
 
     void setLaunchRotateBackward() {
-        launcherMotor.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorLauncherRight.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorLauncherLeft.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     /**
@@ -65,17 +135,17 @@ class Definitions {
      **/
 
     void setDriveRotateLeft() {
-        frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        backLeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        frontLeftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        backRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorDriveFrontRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorDriveBackLeft.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorDriveFrontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
+        motorDriveBackRight.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     void setDriveRotateRight() {
-        frontRightMotor.setDirection(DcMotorSimple.Direction.FORWARD);
-        backLeftMotor.setDirection(DcMotorSimple.Direction.FORWARD);
-        frontLeftMotor.setDirection(DcMotorSimple.Direction.FORWARD);
-        backRightMotor.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorDriveFrontRight.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorDriveBackLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorDriveFrontLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorDriveBackRight.setDirection(DcMotorSimple.Direction.FORWARD);
     }
 
     /**
@@ -83,18 +153,19 @@ class Definitions {
      **/
 
     void restartDriveEncoders() {
-        frontLeftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        frontRightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        backLeftMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        backRightMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorDriveFrontLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorDriveFrontRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorDriveBackLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorDriveBackRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 
     void restartLauncherEncoders() {
-        launcherMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorLauncherRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorLauncherLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 
     void restartIntakeEncoders() {
-        intakeMotor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        motorIntake.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 
     /**
@@ -102,18 +173,19 @@ class Definitions {
      **/
 
     void setDriveDistance(int distance) {
-        frontLeftMotor.setTargetPosition(distance);
-        frontRightMotor.setTargetPosition(distance);
-        backLeftMotor.setTargetPosition(distance);
-        backRightMotor.setTargetPosition(distance);
+        motorDriveFrontLeft.setTargetPosition(distance);
+        motorDriveFrontRight.setTargetPosition(distance);
+        motorDriveBackLeft.setTargetPosition(distance);
+        motorDriveBackRight.setTargetPosition(distance);
     }
 
     void setLauncherRotateDistance(int distance) {
-        launcherMotor.setTargetPosition(distance);
+        motorLauncherRight.setTargetPosition(distance);
+        motorLauncherLeft.setTargetPosition(distance);
     }
 
     void setIntakeRotateDistance(int distance) {
-        intakeMotor.setTargetPosition(distance);
+        motorIntake.setTargetPosition(distance);
     }
 
     /**
@@ -121,18 +193,19 @@ class Definitions {
      **/
 
     void runToPosition() {
-        frontLeftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        frontRightMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        backLeftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        backRightMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorDriveFrontLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorDriveFrontRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorDriveBackLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorDriveBackRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
     }
 
     void runToLauncherPosition() {
-        launcherMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorLauncherRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorLauncherLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
     }
 
     void runToIntakePosition() {
-        intakeMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorIntake.setMode(DcMotor.RunMode.RUN_TO_POSITION);
     }
 
     /**
@@ -140,18 +213,19 @@ class Definitions {
      **/
 
     void setPower(int power) {
-        frontLeftMotor.setPower(power);
-        frontRightMotor.setPower(power);
-        backLeftMotor.setPower(power);
-        backRightMotor.setPower(power);
+        motorDriveFrontLeft.setPower(power);
+        motorDriveFrontRight.setPower(power);
+        motorDriveBackLeft.setPower(power);
+        motorDriveBackRight.setPower(power);
     }
 
     void setLaunchPower(int power) {
-        launcherMotor.setPower(power);
+        motorLauncherRight.setPower(power);
+        motorLauncherLeft.setPower(power);
     }
 
     void setIntakePower(double power) {
-        intakeMotor.setPower(power);
+        motorIntake.setPower(power);
     }
 
     /**
@@ -160,24 +234,48 @@ class Definitions {
 
     void waitForDriveMotorStop() {
         while (true) {
-            if (!(frontLeftMotor.isBusy())) break;
+            if (!(motorDriveFrontLeft.isBusy())) break;
         }
     }
 
     void waitForLauncherMotorStop() {
         while (true) {
-            if (!(launcherMotor.isBusy())) break;
+            if (!(motorLauncherRight.isBusy())) break;
 
         }
     }
 
-    void waitForIntakeMotorStop() {
+    void waitFormotorIntakeStop() {
         while (true) {
-            if (!(intakeMotor.isBusy())) break;
+            if (!(motorIntake.isBusy())) break;
         }
     }
+
+    void waitForColorSensorsToReadBeacon() {
+        sensorColorRight.red();
+        sensorColorRight.blue();
+        sensorColorRight.alpha();
+        sensorColorRight.argb();
+
+        sensorColorLeft.red();
+        sensorColorLeft.blue();
+        sensorColorLeft.alpha();
+        sensorColorLeft.argb();
+
+    }
+
+
+
 
     /*-----------------------------------------------------------------------*/
     /*TeleOp*/
     /*-----------------------------------------------------------------------*/
+
+
+    void launcherMotor(int power) {
+        motorLauncherLeft.setPower(power);
+        motorLauncherRight.setPower(power);
+    }
 }
+
+

@@ -14,12 +14,19 @@ public class BamTeleOp extends LinearOpMode {
     private Definitions robot = new Definitions();
     private boolean motor = false;
     private boolean toggle = true;
+
+    boolean gamepadLeftTrigger = false;
+    boolean gamepadRightTrigger = false;
     @Override
     public void runOpMode() throws InterruptedException {
         telemetry.addData("Status", "Initialized");
         telemetry.update();
         robot.init(hardwareMap);
         runtime.reset();
+
+        robot.servoButtonLeft.setPosition(90);
+        robot.servoButtonRight.setPosition(90);
+        robot.servoCapLifterRelease.setPosition(90);
         waitForStart();
         while (opModeIsActive()) {
             telemetry.addData("Status", "Run Time: " + runtime.toString());
@@ -98,21 +105,16 @@ public class BamTeleOp extends LinearOpMode {
             }
 
             if (gamepad2.a) {
-                robot.setLaunchRotateForward();
-                robot.restartLauncherEncoders();
-                robot.setLauncherRotateDistance(1600);
-                robot.runToLauncherPosition();
-                robot.setLaunchPower(1);
-                robot.waitForLauncherMotorStop();
-                robot.setLaunchPower(0);
+                robot.launchOneBall();
                 idle();
             }
-            else if (gamepad2.b) {
-                robot.launcherMotor(1);
-            }
             else {
-                robot.launcherMotor(0);
+                robot.launcherMotors(0);
             }
+
+            robot.motorCapballLifter.setPower(0.5 * gamepad2.left_stick_y);
+
+
         }
     }
 }

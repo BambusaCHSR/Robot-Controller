@@ -28,13 +28,7 @@ class oneBallAuto extends LinearOpMode {
         idle();
 
         //Launch particle
-        robot.setLaunchRotateForward();
-        robot.restartLauncherEncoders();
-        robot.setLauncherRotateDistance(1600);
-        robot.runToLauncherPosition();
-        robot.setLaunchPower(1);
-        robot.waitForLauncherMotorStop();
-        robot.setLaunchPower(0);
+        robot.launchOneBall();
         sleep(500);
         idle();
 

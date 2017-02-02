@@ -27,35 +27,7 @@ class twoBallAuto extends LinearOpMode {
         idle();
 
         //Launch particle one
-        robot.setLaunchRotateForward();
-        robot.restartLauncherEncoders();
-        robot.setLauncherRotateDistance(1600);
-        robot.runToLauncherPosition();
-        robot.setLaunchPower(1);
-        robot.waitForLauncherMotorStop();
-        robot.setLaunchPower(0);
-        sleep(500);
-        idle();
-
-        //bring the second particle up
-        robot.setIntakeUp();
-        robot.restartIntakeEncoders();
-        robot.setIntakeRotateDistance(4000);
-        robot.runToIntakePosition();
-        robot.setIntakePower(1);
-        robot.waitForIntakeMotorStop();
-        robot.setIntakePower(0);
-        sleep(10);
-        idle();
-
-        //launch second particle
-        robot.setLaunchRotateForward();
-        robot.restartLauncherEncoders();
-        robot.setLauncherRotateDistance(1600);
-        robot.runToLauncherPosition();
-        robot.setLaunchPower(1);
-        robot.waitForLauncherMotorStop();
-        robot.setLaunchPower(0);
+        robot.launchTwoBalls();
         sleep(500);
         idle();
 

@@ -3,129 +3,129 @@
 
     <item
         is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Blocks-release/jars/classes.jar"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="bfdfb2339e516dcb78b53e85a9f32e33ee71833f">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Blocks-release_9e86190a2b11f7ab27255a1694474d382b30fca3/classes.dex" />
+        sha1="d6ad9eaf8be68df4a40f57085bfa57f52f3f1f49">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_73a50519f5ffbee6c7d9e9b776002bc36b33595f/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/d2xx.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="04004e5f55992d1d8a105a4ade7be348986ed34e">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/d2xx_6e639d837b3a83e23149f355ce326c0f5d841812/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="9bf02f41db1f6ec91af06ec508925c91ac5c72e9">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Inspection-release_bddadd3262bf00be9c436ed1151db89db50b5cb8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/Vuforia.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="58b9241fc73757cb6e0cdc32422a71a8e7e6d178">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/Vuforia_852303b6e6d8f3f879b9d92a711dc7f894b4007c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f6a826116ec7bc3c38197e60ff96e806e2a323b8">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_b2f388aa86073b84120954d2cae4567307f7d3dd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="4dbf4c8268bb676e1b92a2b2b77846bad19617ea">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_729298ee1a26e27e4189a2251b9e218167f98c13/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/ModernRobotics-release/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="01999c87afe3d10ffa06f3efa66f39e61e6aba0c">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-ModernRobotics-release_24fd4d6965d6592c8ca1c7e55397b762e1a968f1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/support-annotations-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ba3817622501fb5da8e6b967e42c6717fbd26b02">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_bb5feedd58b86c17a52924c4eec512feb1f62e90/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="51343b483c5a260b7203ac91d9009f27d38d8e3d">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-RobotCore-release_c4bd485c218b636e936aa69a39e229ce7883de48/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="42c41c87fc12bbc65308fd3f55c87d2e1cdf8912">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-FtcCommon-release_1fedd3bc95af9d6d74eaaeed3ffbb9d9e4a64df4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Analytics-release/jars/classes.jar"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Analytics-release/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Analytics-release_b2e85c6a2fb7714728dafe2a6ef35de43f94a1c0/classes.dex" />
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Analytics-release_71c93a4e331ab209bb5e737b61d52b2b630bb4c1/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/gson-2.7.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="9226e51ca21f0621b1d85711af893a120eb375f6">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_86606eee6979d61a7d01697d235283eb32520626/classes.dex" />
+        sha1="f6a826116ec7bc3c38197e60ff96e806e2a323b8">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_a757707ea290daad15d95b5c2e039515caec155a/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Hardware-release/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="a82bee948963c3d4ed5b535c680c3183f5d1bcb6">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Hardware-release_1f7106072ce71cbeb7854703604fa6d862ba8c69/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/WirelessP2p-release/jars/classes.jar"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/WirelessP2p-release/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
-        <dex dex="/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-WirelessP2p-release_3a2914bb5de1338615a488bc989bf4b4c90cf04e/classes.dex" />
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-WirelessP2p-release_ed18f288cb03f66971304d647cd8ef485a005bd0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/d2xx.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="04004e5f55992d1d8a105a4ade7be348986ed34e">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/d2xx_2f95a9d131c97046fc9d6f94914616f5f939325d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d8659716c4bdb04ae63d6edfdc6d106c2f08d967">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_45da5beade5e773fdedc8baffa5a6bb6ad4acf6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/Vuforia.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="58b9241fc73757cb6e0cdc32422a71a8e7e6d178">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/Vuforia_c5c6ff7493c332a53c08ae703fb0932d5ef53acd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/ModernRobotics-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="01999c87afe3d10ffa06f3efa66f39e61e6aba0c">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-ModernRobotics-release_9d53c9bbe0d39db16520bb2ca26d944f79c816f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ba3817622501fb5da8e6b967e42c6717fbd26b02">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_006fd7791032e85a8772c60c99e8dca59d4a2a47/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Blocks-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="bfdfb2339e516dcb78b53e85a9f32e33ee71833f">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Blocks-release_497d1d3e62ac3dd29772fa18f3d9d53ad57a3b5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="42c41c87fc12bbc65308fd3f55c87d2e1cdf8912">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-FtcCommon-release_3904882591a1bf970fce9e9d8911a35522f47518/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9bf02f41db1f6ec91af06ec508925c91ac5c72e9">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Inspection-release_cce52882c9bb530950186803255e22388bebece7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Hardware-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a82bee948963c3d4ed5b535c680c3183f5d1bcb6">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-Hardware-release_81644954e1a55ae3a83947427f0c2d4198ef85d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="51343b483c5a260b7203ac91d9009f27d38d8e3d">
+        <dex dex="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/intermediates-exploded-aar-RobotCore-release_bb820313b45da43bdd739b220875a6374d95de40/classes.dex" />
     </item>
 
 </items>

@@ -26,7 +26,7 @@ public class BamTeleOp extends LinearOpMode {
 
         robot.servoButtonLeft.setPosition(90);
         robot.servoButtonRight.setPosition(90);
-        robot.servoCapLifterRelease.setPosition(90);
+        robot.servoCapLifterReleaseLeft.setPosition(90);
         waitForStart();
         while (opModeIsActive()) {
             telemetry.addData("Status", "Run Time: " + runtime.toString());

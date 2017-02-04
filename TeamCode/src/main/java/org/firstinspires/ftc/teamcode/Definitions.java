@@ -1,10 +1,12 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsUsbLegacyModule;
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsUsbServoController;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import com.qualcomm.robotcore.hardware.GyroSensor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.hardware.LightSensor;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.UltrasonicSensor;
 
@@ -38,34 +40,25 @@ class Definitions {
     //initiates the button pressing servos
     Servo servoButtonLeft;
     Servo servoButtonRight;
-    Servo servoCapLifterRelease;
+    Servo servoCapLifterReleaseLeft;
+    Servo servoCapLifterReleaseRight;
 
+    ModernRoboticsUsbServoController ServoController;
     /* Initiates all the sensors */
     //Initiates the color sensors
     ColorSensor sensorColorLeft;
     ColorSensor sensorColorRight;
     ColorSensor sensorColorBottom;
-    
+
+    LightSensor sensorLightBottom;
     
     //initiates the distance sensors
-    UltrasonicSensor sensorDistance;
+    UltrasonicSensor sensorDistanceLeft;
+    UltrasonicSensor sensorDistanceRight;
     
     //initiates the gyro sensor
-    GyroSensor sensorGyro;
+    //GyroSensor sensorGyro;
 
-    //===============================================//
-
-    /*byte[] colorCcash;
-
-    I2cDevice sensorColorLeft;
-    I2cDevice sensorColorRight;
-    I2cDevice sensorColorBottom;
-
-    I2cDeviceSynch sensorColorLeftReader;
-    I2cDeviceSynch sensorColorRightReader;
-    I2cDeviceSynch sensorColorBottomReader;
-
-    boolean LEDstate = true;*/
     //===============================================//
     
     /** Initiates variables **/
@@ -101,7 +94,10 @@ class Definitions {
         //sets name for Servos
         servoButtonLeft = Map.servo.get("servoButtonLeft");
         servoButtonRight = Map.servo.get("servoButtonRight");
-        servoCapLifterRelease = Map.servo.get("servoCapLifterRelease");
+
+
+        servoCapLifterReleaseLeft = Map.servo.get("servoCapLifterReleaseLeft");
+        servoCapLifterReleaseRight = Map.servo.get("servoCapLifterReleaseRight");
 
         //--------------------------------------------------------//
 
@@ -111,24 +107,13 @@ class Definitions {
         sensorColorRight = Map.colorSensor.get("sensorColorRight");
         sensorColorBottom = Map.colorSensor.get("sensorColorBottom");
 
-        /*sensorColorLeft = Map.i2cDevice.get("sensorColorLeft");
-        sensorColorRight = Map.i2cDevice.get("sensorColorRight");
-        sensorColorBottom = Map.i2cDevice.get("sensorColorBottom");
-
-        sensorColorLeftReader = new I2cDeviceSynchImpl(sensorColorLeft, I2cAddr.create8bit(FILL I WHEN YOU CAN),false);
-        sensorColorLeftReader.engage();
-
-        sensorColorRightReader = new I2cDeviceSynchImpl(sensorColorRight, I2cAddr.create8bit(/**FILL I WHEN YOU CAN),false);
-        sensorColorRightReader.engage();
-
-        sensorColorBottomReader = new I2cDeviceSynchImpl(sensorColorBottom, I2cAddr.create8bit(/**FILL I WHEN YOU CAN),false);
-        sensorColorBottomReader.engage(); */
-
+        sensorLightBottom = Map.lightSensor.get("sensorLightBotom");
         //initiates the names of the distance sensors
-        sensorDistance = Map.ultrasonicSensor.get("sensorDistance");
+        sensorDistanceLeft = Map.ultrasonicSensor.get("sensorDistanceLeft");
+        sensorDistanceRight = Map.ultrasonicSensor.get("sensorDistanceRight");
 
         //initiates the names of the gyro sensors
-        sensorGyro = Map.gyroSensor.get("sensorGyro");
+        //sensorGyro = Map.gyroSensor.get("sensorGyro");
     }
 
     /*-----------------------------------------------------------------------*/
@@ -149,6 +134,11 @@ class Definitions {
     private void setLaunchRotateForward() {
         motorLauncherRight.setDirection(DcMotorSimple.Direction.REVERSE);
         motorLauncherLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+    }
+
+    void setDriveDiag() {
+        motorDriveFrontLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorDriveBackRight.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     private void setIntakeUp() {
@@ -204,6 +194,11 @@ class Definitions {
         motorDriveBackRight.setTargetPosition(distance);
     }
 
+    void setDriveDiagDistance(int distance) {
+        motorDriveFrontLeft.setTargetPosition(distance);
+        motorDriveBackRight.setTargetPosition(distance);
+    }
+
     private void setLauncherRotateDistance(int distance) {
         motorLauncherRight.setTargetPosition(distance);
         motorLauncherLeft.setTargetPosition(distance);
@@ -221,6 +216,10 @@ class Definitions {
         motorDriveFrontLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         motorDriveFrontRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         motorDriveBackLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        motorDriveBackRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+    }
+    void runToPositionDiagonal() {
+        motorDriveFrontLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         motorDriveBackRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
     }
 
@@ -247,6 +246,11 @@ class Definitions {
     private void setLaunchPower(double power) {
         motorLauncherRight.setPower(power);
         motorLauncherLeft.setPower(power);
+    }
+
+    void setPowerDiag(double power) {
+        motorDriveFrontLeft.setPower(power);
+        motorDriveBackRight.setPower(power);
     }
 
     private void setIntakePower(double power) {
@@ -343,17 +347,6 @@ class Definitions {
          waitForDriveMotorStop();
          setPower(0);
      }
-
-    void colorSensorColors() {
-        sensorColorLeft.red();
-        sensorColorLeft.blue();
-
-        sensorColorRight.red();
-        sensorColorRight.blue();
-
-        sensorColorBottom.alpha();
-        sensorColorBottom.enableLed(true);
-    }
     /*-----------------------------------------------------------------------*/
     /* ************************ */ /**TeleOp**/ /* ************************* */
     /*-----------------------------------------------------------------------*/

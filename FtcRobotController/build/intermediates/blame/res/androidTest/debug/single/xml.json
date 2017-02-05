@@ -16,6 +16,14 @@
         "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9legacybot.xml"
     },
     {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/k9legacybot.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9legacybot.xml"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/k9usbbot.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9usbbot.xml"
+    },
+    {
         "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/pushbot.xml",
         "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbot.xml"
     },
@@ -26,6 +34,14 @@
     {
         "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/k9usbbot.xml",
         "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9usbbot.xml"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/pushbot.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbot.xml"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/device_filter.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/bundles/debug/res/xml/device_filter.xml"
     },
     {
         "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/squarebot.xml",
@@ -40,8 +56,16 @@
         "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/bundles/debug/res/xml/device_filter.xml"
     },
     {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/preferences.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/bundles/debug/res/xml/preferences.xml"
+    },
+    {
         "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/pushbot.xml",
         "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbot.xml"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/pushbotsens.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbotsens.xml"
     },
     {
         "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/preferences.xml",
@@ -50,6 +74,10 @@
     {
         "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/preferences.xml",
         "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/bundles/debug/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/squarebot.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/xml/squarebot.xml"
     },
     {
         "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/res/merged/androidTest/debug/xml/pushbotsens.xml",

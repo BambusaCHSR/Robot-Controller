@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/icon_robotcontroller.png",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_robotcontroller.png"
+    },
+    {
         "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/icon_robotcontroller.png",
         "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_robotcontroller.png"
     },
@@ -10,6 +14,14 @@
     {
         "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/black_border.xml",
         "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/Blocks-release/res/drawable/black_border.xml"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/black_border.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/Blocks-release/res/drawable/black_border.xml"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/icon_menu.png",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_menu.png"
     },
     {
         "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/black_border.xml",
@@ -30,5 +42,9 @@
     {
         "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/icon_menu.png",
         "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_menu.png"
+    },
+    {
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/res/merged/release/drawable/button_shape.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/drawable/button_shape.xml"
     }
 ]

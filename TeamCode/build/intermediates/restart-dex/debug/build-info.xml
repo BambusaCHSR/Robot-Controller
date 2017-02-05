@@ -5,40 +5,33 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="36557451094660"
-    token="-5663558144919118915"
-    verifier="CLASS_ADDED" >
+    timestamp="78166847652798"
+    token="7361606481795935031"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="107" />
+        duration="134" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="14" />
+        duration="16" />
     <task
         name="verifier"
-        duration="2" />
+        duration="0" />
 
     <artifact
-        location="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-        type="DEX" />
+        location="/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/outputs/apk/TeamCode-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="36024480004895"
+        timestamp="78166847652798"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/outputs/apk/TeamCode-debug.apk"
+            location="/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/outputs/apk/TeamCode-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="36557451094660"
-        verifier="CLASS_ADDED" >
-        <artifact
-            location="/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

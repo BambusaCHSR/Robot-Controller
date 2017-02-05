@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
  * Created by - Elijah Sauder on 1/7/17, 10:46 PM.
  **/
 
-@Disabled
+
 @Autonomous(name="OneBall", group="Bambusa")
 class oneBallAuto extends LinearOpMode {
     private Definitions robot = new Definitions();
@@ -28,7 +28,13 @@ class oneBallAuto extends LinearOpMode {
         idle();
 
         //Launch particle
-        robot.launchOneBall();
+        robot.setLaunchRotateForward();
+        robot.restartLauncherEncoders();
+        robot.setLauncherRotateDistance(1000);
+        robot.runToLauncherPosition();
+        robot.setLaunchPower(1);
+        robot.waitForLauncherMotorStop();
+        robot. setLaunchPower(0);
         sleep(500);
         idle();
 

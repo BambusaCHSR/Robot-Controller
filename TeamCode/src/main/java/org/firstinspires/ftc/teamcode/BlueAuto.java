@@ -14,7 +14,7 @@ class BlueAuto extends LinearOpMode{
     private Definitions robot = new Definitions();
     @Override
     public void runOpMode() throws InterruptedException {
-        robot.init(hardwareMap);
+        /*robot.init(hardwareMap);
         robot.sensorLightBottom.enableLed(true);
         waitForStart();
 
@@ -50,5 +50,5 @@ class BlueAuto extends LinearOpMode{
                 robot.setPower(0);
             }
         }
-    }
-}
+    }*/
+}}

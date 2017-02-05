@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsUsbController;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -10,13 +11,11 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 @TeleOp(name="BamTeleOp", group="Bambusa")
 public class BamTeleOp extends LinearOpMode {
-    private ElapsedTime runtime = new ElapsedTime();
+    private ElapsedTime runtime = new ElapsedTime(ElapsedTime.SECOND_IN_NANO);
     private Definitions robot = new Definitions();
     private boolean motor = false;
     private boolean toggle = true;
 
-    boolean gamepadLeftTrigger = false;
-    boolean gamepadRightTrigger = false;
     @Override
     public void runOpMode() throws InterruptedException {
         telemetry.addData("Status", "Initialized");
@@ -24,12 +23,35 @@ public class BamTeleOp extends LinearOpMode {
         robot.init(hardwareMap);
         runtime.reset();
 
-        robot.servoButtonLeft.setPosition(90);
-        robot.servoButtonRight.setPosition(90);
-        robot.servoCapLifterReleaseLeft.setPosition(90);
+        //sets positions for all servos on robot
+        robot.servoCapLifterReleaseRight.setPosition(0.1);
+        robot.servoButtonLeft.setPosition(0.4);
+        robot.servoButtonRight.setPosition(0.56);
+
         waitForStart();
         while (opModeIsActive()) {
             telemetry.addData("Status", "Run Time: " + runtime.toString());
+            telemetry.addLine();
+            telemetry.addData("UltraSensor Right: ", robot.sensorDistanceRight.getUltrasonicLevel());
+            telemetry.addData("UltraSensor Left: ",robot.sensorDistanceLeft.getUltrasonicLevel());
+            telemetry.addLine();
+            telemetry.addData("ColorSensor Right: ", robot.sensorColorRight.hashCode());
+            telemetry.addData("ColorSensor Left: ", robot.sensorColorLeft.hashCode());
+            telemetry.addData("ColorSensor Bottom: ", robot.sensorColorBottom.hashCode());
+            telemetry.addLine();
+            telemetry.addData("ServoButton Left: ", robot.servoButtonLeft.getPosition());
+            telemetry.addData("ServoButton Right: ", robot.servoButtonRight.getPosition());
+            telemetry.addLine();
+            telemetry.addData("MotorDrive FrontRight: ",robot.motorDriveFrontRight.getPower());
+            telemetry.addData("MotorDrive FrontLeft: ",robot.motorDriveFrontLeft.getPower());
+            telemetry.addData("MotorDrive BackRight: ",robot.motorDriveBackRight.getPower());
+            telemetry.addData("MotorDrive BackLeft: ",robot.motorDriveBackLeft.getPower());
+            telemetry.addLine();
+            telemetry.addData("LauncherMotor Right: ",robot.motorLauncherRight.getPower());
+            telemetry.addData("LauncherMotor Left: ",robot.motorLauncherLeft.getPower());
+            telemetry.addLine();
+            telemetry.addData("IntakeMotor: ",robot.motorIntake.getDirection());
+            telemetry.addData("CapballMotor: ",robot.motorCapballLifter.getCurrentPosition());
             telemetry.update();
 
             if(gamepad1.left_stick_x < 0) {
@@ -105,16 +127,39 @@ public class BamTeleOp extends LinearOpMode {
             }
 
             if (gamepad2.a) {
-                robot.launchOneBall();
-                idle();
+                robot.motorLauncherLeft.setPower(-1);
+                robot.motorLauncherRight.setPower(1);
+            }
+            else if (gamepad2.b) {
+                robot.motorLauncherLeft.setPower(1);
+                robot.motorLauncherRight.setPower(-1);
             }
             else {
-                robot.launcherMotors(0);
+                robot.motorLauncherLeft.setPower(0);
+                robot.motorLauncherRight.setPower(0);
             }
 
-            robot.motorCapballLifter.setPower(0.5 * gamepad2.left_stick_y);
+            robot.motorCapballLifter.setPower(-0.5 * gamepad2.left_stick_y);
 
+            if (gamepad2.dpad_up) {
+                robot.servoCapLifterReleaseLeft.setPosition(1);
+                sleep(1000);
+                robot.servoCapLifterReleaseRight.setPosition(1);
+            }
 
+            if (gamepad2.right_trigger > 0) {
+                robot.servoButtonRight.setPosition(0.9);
+            }
+            else {
+                robot.servoButtonRight.setPosition(0.56);
+            }
+
+            if (gamepad2.left_trigger > 0) {
+                robot.servoButtonLeft.setPosition(0.1);
+            }
+            else {
+                robot.servoButtonLeft.setPosition(0.4);
+            }
         }
     }
 }

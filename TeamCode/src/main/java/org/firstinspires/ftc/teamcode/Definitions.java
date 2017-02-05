@@ -1,12 +1,9 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.hardware.modernrobotics.ModernRoboticsUsbLegacyModule;
-import com.qualcomm.hardware.modernrobotics.ModernRoboticsUsbServoController;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.hardware.LightSensor;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.hardware.UltrasonicSensor;
 
@@ -23,7 +20,7 @@ class Definitions {
     DcMotor motorDriveFrontLeft;
     DcMotor motorDriveBackRight;
     DcMotor motorDriveBackLeft;
-    
+
     //initiates the intake motor
     DcMotor motorIntake;
     
@@ -43,15 +40,12 @@ class Definitions {
     Servo servoCapLifterReleaseLeft;
     Servo servoCapLifterReleaseRight;
 
-    ModernRoboticsUsbServoController ServoController;
     /* Initiates all the sensors */
     //Initiates the color sensors
     ColorSensor sensorColorLeft;
     ColorSensor sensorColorRight;
     ColorSensor sensorColorBottom;
 
-    LightSensor sensorLightBottom;
-    
     //initiates the distance sensors
     UltrasonicSensor sensorDistanceLeft;
     UltrasonicSensor sensorDistanceRight;
@@ -64,7 +58,7 @@ class Definitions {
     /** Initiates variables **/
     //Initiates local variables that are used in TeleOp
     float x, y, r, m, n;
-    
+
     //===============================================//
 
     /** creates all the defined actions called upon in the other programs **/
@@ -107,7 +101,7 @@ class Definitions {
         sensorColorRight = Map.colorSensor.get("sensorColorRight");
         sensorColorBottom = Map.colorSensor.get("sensorColorBottom");
 
-        sensorLightBottom = Map.lightSensor.get("sensorLightBotom");
+        //sensorLightBottom = Map.lightSensor.get("sensorLightBotom");
         //initiates the names of the distance sensors
         sensorDistanceLeft = Map.ultrasonicSensor.get("sensorDistanceLeft");
         sensorDistanceRight = Map.ultrasonicSensor.get("sensorDistanceRight");
@@ -131,9 +125,9 @@ class Definitions {
         motorDriveBackRight.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
-    private void setLaunchRotateForward() {
-        motorLauncherRight.setDirection(DcMotorSimple.Direction.REVERSE);
-        motorLauncherLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+    void setLaunchRotateForward() {
+        motorLauncherRight.setDirection(DcMotorSimple.Direction.FORWARD);
+        motorLauncherLeft.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     void setDriveDiag() {
@@ -141,7 +135,7 @@ class Definitions {
         motorDriveBackRight.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
-    private void setIntakeUp() {
+    void setIntakeUp() {
         motorIntake.setDirection(DcMotorSimple.Direction.FORWARD);
     }
 
@@ -174,12 +168,12 @@ class Definitions {
         motorDriveBackRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 
-    private void restartLauncherEncoders() {
+    void restartLauncherEncoders() {
         motorLauncherRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         motorLauncherLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 
-    private void restartIntakeEncoders() {
+    void restartIntakeEncoders() {
         motorIntake.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     }
 
@@ -199,12 +193,12 @@ class Definitions {
         motorDriveBackRight.setTargetPosition(distance);
     }
 
-    private void setLauncherRotateDistance(int distance) {
+    void setLauncherRotateDistance(int distance) {
         motorLauncherRight.setTargetPosition(distance);
         motorLauncherLeft.setTargetPosition(distance);
     }
 
-    private void setIntakeRotateDistance(int distance) {
+    void setIntakeRotateDistance(int distance) {
         motorIntake.setTargetPosition(distance);
     }
 
@@ -223,12 +217,12 @@ class Definitions {
         motorDriveBackRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
     }
 
-    private void runToLauncherPosition() {
+    void runToLauncherPosition() {
         motorLauncherRight.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         motorLauncherLeft.setMode(DcMotor.RunMode.RUN_TO_POSITION);
     }
 
-    private void runToIntakePosition() {
+    void runToIntakePosition() {
         motorIntake.setMode(DcMotor.RunMode.RUN_TO_POSITION);
     }
 
@@ -243,7 +237,7 @@ class Definitions {
         motorDriveBackRight.setPower(power);
     }
 
-    private void setLaunchPower(double power) {
+    void setLaunchPower(double power) {
         motorLauncherRight.setPower(power);
         motorLauncherLeft.setPower(power);
     }
@@ -253,7 +247,7 @@ class Definitions {
         motorDriveBackRight.setPower(power);
     }
 
-    private void setIntakePower(double power) {
+    void setIntakePower(double power) {
         motorIntake.setPower(power);
     }
 
@@ -267,14 +261,14 @@ class Definitions {
         }
     }
 
-    private void waitForLauncherMotorStop() {
+    void waitForLauncherMotorStop() {
         while (true) {
             if (!(motorLauncherRight.isBusy())) break;
 
         }
     }
 
-    private void waitForMotorIntakeStop() {
+    void waitForMotorIntakeStop() {
         while (true) {
             if (!(motorIntake.isBusy())) break;
         }
@@ -283,7 +277,7 @@ class Definitions {
     void launchOneBall() {
         setLaunchRotateForward();
         restartLauncherEncoders();
-        setLauncherRotateDistance(1600);
+        setLauncherRotateDistance(1000);
         runToLauncherPosition();
         setLaunchPower(1);
         waitForLauncherMotorStop();
@@ -293,7 +287,7 @@ class Definitions {
     void launchTwoBalls() {
         setLaunchRotateForward();
         restartLauncherEncoders();
-        setLauncherRotateDistance(1600);
+        setLauncherRotateDistance(1000);
         runToLauncherPosition();
         setLaunchPower(1);
         waitForLauncherMotorStop();
@@ -311,7 +305,7 @@ class Definitions {
         //launch second particle
         setLaunchRotateForward();
         restartLauncherEncoders();
-        setLauncherRotateDistance(1600);
+        setLauncherRotateDistance(1000);
         runToLauncherPosition();
         setLaunchPower(1);
         waitForLauncherMotorStop();

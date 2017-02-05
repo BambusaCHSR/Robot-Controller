@@ -1,34 +1,18 @@
 [
     {
-        "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/icon_robotcontroller.png",
-        "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_robotcontroller.png"
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/icon_menu.png",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_menu.png"
     },
     {
-        "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/icon_menu.png",
-        "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_menu.png"
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/button_shape.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/drawable/button_shape.xml"
     },
     {
-        "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/black_border.xml",
-        "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/drawable/black_border.xml"
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/icon_robotcontroller.png",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_robotcontroller.png"
     },
     {
-        "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/button_shape.xml",
-        "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/drawable/button_shape.xml"
-    },
-    {
-        "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/black_border.xml",
-        "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/drawable/black_border.xml"
-    },
-    {
-        "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/icon_menu.png",
-        "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_menu.png"
-    },
-    {
-        "merged": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/button_shape.xml",
-        "source": "/Users/elijah/Documents/Robtics/Code/Robot-Controller/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/drawable/button_shape.xml"
-    },
-    {
-        "merged": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/icon_robotcontroller.png",
-        "source": "/Users/esauder/Documents/My Docs/Robotics/Team Files/Bambusa/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/drawable/icon_robotcontroller.png"
+        "merged": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/res/merged/debug/drawable/black_border.xml",
+        "source": "/Users/elijah/Documents/Robtics/code2/Robot-Controller/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/drawable/black_border.xml"
     }
 ]

@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.hardware.UltrasonicSensor;
  **/
 
 /* Creates the definition java file (Class) */
-class Definitions {
+public class Definitions {
     /** Initiates all the motors, servos, and sensors **/
     /*Initiates all the motors */
     //Initiates the drive motors

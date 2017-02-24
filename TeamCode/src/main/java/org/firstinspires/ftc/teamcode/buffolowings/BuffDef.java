@@ -3,10 +3,12 @@ package org.firstinspires.ftc.teamcode.buffolowings;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.DistanceSensor;
 import com.qualcomm.robotcore.hardware.GyroSensor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
 import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.UltrasonicSensor;
 
 /**
  * Created by ReaperCrew on 2/21/17
@@ -49,7 +51,10 @@ public class BuffDef {
     ColorSensor sensorColor;
 
     //initiates the gyro sensor (not used at this moment (2/21/17))
-    GyroSensor sensotGyro;
+    GyroSensor sensorGyro;
+
+    //initiates the distance sensor
+    UltrasonicSensor sensorDistance;
 
     //===============================================//
 
@@ -92,7 +97,10 @@ public class BuffDef {
         sensorODS = buffMap.opticalDistanceSensor.get("sensorODS");
 
         //Initiates the name of the gyro sensor
-        sensotGyro = buffMap.gyroSensor.get("sensorGyro");
+        sensorGyro = buffMap.gyroSensor.get("sensorGyro");
+
+        //initiates the name of the distance sensor
+        sensorDistance = buffMap.ultrasonicSensor.get("sensorDistance");
     }
 
     /*-----------------------------------------------------------------------*/
